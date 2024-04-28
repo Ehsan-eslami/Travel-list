@@ -1,8 +1,8 @@
 import { useState } from "react";
-import Logo from "./Logo";
-import Form from "./Form";
-import PacageList from "./PacageList";
-import Stats from "./Stats";
+import Logo from "./components/Logo";
+import Form from "./components/Form";
+import PackageList from "./components/PackageList";
+import Stats from "./components/Stats";
 
 export default function App() {
   const [items, setItems] = useState([]);
@@ -32,7 +32,7 @@ export default function App() {
     <div className="app">
       <Logo />
       <Form onAddItems={handleAddItems} />
-      <PacageList
+      <PackageList
         items={items}
         onDeleteItems={handleDeleteItems}
         onToggleItems={handleToggleItems}
